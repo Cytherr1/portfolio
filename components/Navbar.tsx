@@ -2,28 +2,28 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { links } from '@/lib/data';
+import Link from 'next/link';
 
 export default function Navbar() {
 	return (
-		<motion.div className="navbar bg-base-300 fixed"
-			initial={{ y: -100, opacity: 0}}
-			animate={{ y: 0, opacity: 1}}
-		>
-			<div className="navbar-start">
-				<ul className="menu menu-horizontal px-1">
-					<li><a>Link</a></li>
-				</ul>
-			</div>
-			<div className="navbar-center">
-				<ul className="menu menu-horizontal px-1">
-					<li><a>Link</a></li>
-				</ul>
-			</div>
-			<div className="navbar-end">
-				<ul className="menu menu-horizontal px-1">
-					<li><a>Link</a></li>
-				</ul>
-			</div>
-		</motion.div>
+		<header className='relative z-[99]'>
+			<motion.div className="fixed navbar bg-base-100 left-1/2 min-h-[3.75rem] rounded-none shadow-xl sm:top-6 sm:h-[2.5rem] sm:w-[36rem] sm:rounded-xl"
+				initial={{ y: -100, x: "-50%", opacity: 0}}
+				animate={{ y: 0, x: "-50%", opacity: 1}}
+			>
+				<div className="flex-1 items-center justify-center">
+					<ul className='menu menu-horizontal px-2 gap-2 items-center justify-center'>
+						{ 
+							links.map(link => (
+								<li key={link.hash}>
+									<Link href={link.hash}>{link.name}</Link>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</motion.div>
+		</header>
 	)
 }
