@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function Navbar() {
 	return (
 		<header className='relative z-[99]'>
-			<motion.div className="fixed navbar bg-base-100 left-1/2 min-h-[3.75rem] rounded-none shadow-xl sm:top-6 sm:h-[2.5rem] sm:w-[36rem] sm:rounded-xl"
+			<motion.div className="fixed navbar bg-base-100 left-1/2 min-h-[3.75rem] rounded-none shadow-xl sm:top-6 sm:h-[2.5rem] sm:w-[27.75rem] sm:rounded-full"
 				initial={{ y: -100, x: "-50%", opacity: 0}}
 				animate={{ y: 0, x: "-50%", opacity: 1}}
 			>
@@ -17,7 +17,7 @@ export default function Navbar() {
 						{ 
 							links.map(link => (
 								<li key={link.hash}>
-									<Link href={link.hash}>{link.name}</Link>
+									<Link href={link.hash} className='rounded-full'>{link.name}</Link>
 								</li>
 							))
 						}
