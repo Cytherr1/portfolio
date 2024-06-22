@@ -1,10 +1,16 @@
+"use client";
+
 import React from 'react'
 import SectionHeading from './SectionHeading'
+import { useSectionInView } from '@/lib/hooks';
 
 export default function About() {
+
+	const { ref } = useSectionInView("About");
+
 	return (
-		<section id='about'>
-			<div className="hero min-h-screen bg-base-200">
+		<section id='about' ref={ref}>
+			<div className="hero min-h-screen sm:min-h-[80vh] bg-base-200">
 				<div className="hero-content text-center">
 					<div className="w-10/12 sm:w-7/12">
 						<SectionHeading>About Me</SectionHeading>

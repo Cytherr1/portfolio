@@ -57,3 +57,28 @@ export const projectsData = [
 		image: loop,
 	},
 ] as const;
+
+export const skillsData = [
+	"Python",
+	"Java",
+	"C#",
+	"JavaScript",
+	"TypeScript",
+	"HTML",
+	"CSS",
+	"Tailwind",
+	"React",
+	"Chakra",
+	"Next.js",
+	"Node.js",
+	"Express",
+	"Django",
+	"Flask",
+	"Git",
+	"MySql",
+	"SqLite",
+	"SQL",
+	"Linux",
+	"AWS",
+	"Unity"
+] as const;

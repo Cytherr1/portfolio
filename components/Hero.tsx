@@ -7,10 +7,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiArrowDownTray } from 'react-icons/hi2';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Hero() {
+
+	const { ref } = useSectionInView("Home");
+
 	return (
-		<section id='home'>
+		<section id='home' ref={ref}>
 			<div className="hero min-h-[100vh] sm:min-h-[80vh] bg-base-200">
 				<div className="hero-content flex-col gap-5 lg:flex-row-reverse sm:gap-14">
 					<motion.div
@@ -40,10 +44,10 @@ export default function Hero() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ type:"spring" ,duration: 0.4, delay: 0.3 }}
 						>
-							<Link href="#contact" className="btn btn-neutral rounded-full">Contact me</Link>
-							<a className="btn bg-base-100 rounded-full" href='/Ugur Oguzhan Obuz.pdf' download>Download CV <HiArrowDownTray size={17}/></a>
-							<Link href="https://github.com/Cytherr1" className="btn bg-base-100 rounded-full"><BsGithub size={17}/></Link>
-							<Link href="https://www.linkedin.com/in/ugobuz/" className="btn bg-base-100 rounded-full"><BsLinkedin  size={17}/></Link>
+							<Link href="#contact" className="btn btn-neutral rounded-full shadow-md">Contact me</Link>
+							<a className="btn bg-base-100 rounded-full shadow-md" href='/Ugur Oguzhan Obuz.pdf' download>Download CV <HiArrowDownTray size={17}/></a>
+							<Link href="https://github.com/Cytherr1" className="btn bg-base-100 rounded-full shadow-md"><BsGithub size={17}/></Link>
+							<Link href="https://www.linkedin.com/in/ugobuz/" className="btn bg-base-100 rounded-full shadow-md"><BsLinkedin  size={17}/></Link>
 						</motion.div>
 					</div>
 				</div>

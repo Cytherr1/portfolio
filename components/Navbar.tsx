@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
 
 export default function Navbar() {
 
-	const [activeSection, setActiveSection] = useState("Home");
+	const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
 	return (
 		<header className='relative z-[999]'>
@@ -30,7 +31,10 @@ export default function Navbar() {
 									className={clsx('flex w-full items-center justify-center px-3 py-3 hover:text-neutral transition', {
 										"text-primary": activeSection === link.name
 									})}
-									onClick={() => setActiveSection(link.name)}
+									onClick={() => {
+										setActiveSection(link.name);
+										setTimeOfLastClick(Date.now());
+									}}
 								>
 									{link.name}
 									{link.name === activeSection && (
