@@ -10,8 +10,8 @@ import { HiArrowDownTray } from 'react-icons/hi2';
 
 export default function Hero() {
 	return (
-		<section>
-			<div className="hero min-h-screen bg-base-200">
+		<section id='home'>
+			<div className="hero min-h-[100vh] sm:min-h-[80vh] bg-base-200">
 				<div className="hero-content flex-col gap-5 lg:flex-row-reverse sm:gap-14">
 					<motion.div
 						initial={{ opacity: 0, scale: 0}}
@@ -48,6 +48,7 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
+			<div className='flex align-center justify-center bg-base-200'><div className="divider divider-horizontal h-20 "></div></div>
 		</section>
 	)
 }

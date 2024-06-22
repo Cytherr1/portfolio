@@ -3,7 +3,7 @@ import SectionHeading from './SectionHeading'
 
 export default function About() {
 	return (
-		<section>
+		<section id='about'>
 			<div className="hero min-h-screen bg-base-200">
 				<div className="hero-content text-center">
 					<div className="w-10/12 sm:w-7/12">
