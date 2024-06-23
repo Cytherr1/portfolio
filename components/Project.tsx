@@ -34,7 +34,7 @@ export default function Project({
 			}}
 			className="group"
 		>
-			<section className="card bg-base-100 shadow-xl sm:max-w-[42rem] sm:h-[21rem] overflow-hidden flex-wrap relative pt-5 transition hover:bg-base-300">
+			<section className="card bg-base-100 shadow-xl sm:max-w-[42rem] sm:h-[21rem] overflow-hidden flex-wrap relative pt-5 transition hover:bg-base-300 rounded-none sm:rounded-2xl">
 				<div className="flex flex-col max-w-[50%] h-full justify-center items-start gap-3 py-6 px-5 sm:pr-2 sm:pl-10 group-even:ml-[15rem] sm:group-even:ml-[19rem]">
 					<h3 className="card-title">{title}</h3>
 					<p>{description}</p>

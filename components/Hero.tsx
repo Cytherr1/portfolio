@@ -8,10 +8,12 @@ import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiArrowDownTray } from 'react-icons/hi2';
 import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider';
 
 export default function Hero() {
 
 	const { ref } = useSectionInView("Home");
+	const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
 	return (
 		<section id='home' ref={ref}>
@@ -44,10 +46,19 @@ export default function Hero() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ type:"spring" ,duration: 0.4, delay: 0.3 }}
 						>
-							<Link href="#contact" className="btn btn-neutral rounded-full shadow-md">Contact me</Link>
-							<a className="btn bg-base-100 rounded-full shadow-md" href='/Ugur Oguzhan Obuz.pdf' download>Download CV <HiArrowDownTray size={17}/></a>
-							<Link href="https://github.com/Cytherr1" className="btn bg-base-100 rounded-full shadow-md"><BsGithub size={17}/></Link>
-							<Link href="https://www.linkedin.com/in/ugobuz/" className="btn bg-base-100 rounded-full shadow-md"><BsLinkedin  size={17}/></Link>
+							<Link 
+								href="#contact" 
+								className="btn btn-neutral rounded-full shadow-md hover:scale-105 hover:bg-black "
+								onClick={ () => {
+									setActiveSection("Contact");
+									setTimeOfLastClick(Date.now());
+								}}
+							>
+								Contact me
+							</Link>
+							<a className="btn bg-base-100 rounded-full shadow-md hover:shadow-xs" href='/Ugur Oguzhan Obuz.pdf' download>Download CV <HiArrowDownTray size={17}/></a>
+							<Link href="https://github.com/Cytherr1" className="btn bg-base-100 rounded-full shadow-md hover:shadow-xs"><BsGithub size={17}/></Link>
+							<Link href="https://www.linkedin.com/in/ugobuz/" className="btn bg-base-100 rounded-full shadow-md hover:shadow-xs"><BsLinkedin  size={17}/></Link>
 						</motion.div>
 					</div>
 				</div>
