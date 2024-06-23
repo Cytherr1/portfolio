@@ -23,7 +23,7 @@ export default function About() {
 							Even learned vps architectures and hosted web apps using {" "}<span className='font-bold'>AWS</span> tools or on {" "}<span className='font-bold'>Nginx</span> Linux servers.
 						</p>
 						<p className="py-6">
-							Experiencing every field may look indecisive but it's {" "}<span className='font-bold'>not</span>. 
+							Experiencing every field may look indecisive but it&apos;s {" "}<span className='font-bold'>not</span>. 
 							It means I put a lot to learn something new everyday and it also {" "}<span className='font-bold'>proves</span> that I can do whatever I am {" "}<span className='font-bold'>determined</span> to do.
 						</p>
 						<p>
