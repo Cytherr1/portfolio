@@ -9,8 +9,8 @@ export default function About() {
 	const { ref } = useSectionInView("About");
 
 	return (
-		<section id='about' ref={ref}>
-			<div className="hero min-h-screen sm:min-h-[80vh] bg-base-200">
+		<section id='about' ref={ref} className='sm:scroll-mt-6 xl:scroll-mt-0'>
+			<div className="hero min-h-[110vh] xl:min-h-screen sm:min-h-[95vh] bg-base-200">
 				<div className="hero-content text-center">
 					<div className="w-10/12 sm:w-7/12">
 						<SectionHeading>About Me</SectionHeading>

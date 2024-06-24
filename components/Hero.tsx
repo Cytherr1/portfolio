@@ -17,7 +17,7 @@ export default function Hero() {
 
 	return (
 		<section id='home' ref={ref}>
-			<div className="hero min-h-[100vh] sm:min-h-[80vh] bg-base-200">
+			<div className="hero min-h-[110vh] xl:min-h-[80vh] sm:min-h-[80vh] bg-base-200">
 				<div className="hero-content flex-col gap-5 lg:flex-row-reverse sm:gap-14">
 					<motion.div
 						initial={{ opacity: 0, scale: 0}}
@@ -29,7 +29,7 @@ export default function Hero() {
 					>
 						<Image src={foto} className="max-w-sm rounded-full shadow-2xl" alt='A photo of me' width={300} height={300} quality={95} priority={true}/>
 					</motion.div>
-					<div className='w-10/12 sm:w-7/12 '>
+					<div className='w-10/12 sm:w-7/12 mt-5'>
 						<motion.h1 className="text-5xl font-bold"
 							initial={{ opacity: 0, y: 100 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Hero() {
 							transition={{ type:"spring" ,duration: 0.4, delay: 0.2 }}
 						>
 							I am a final year Software Engineering student at Bahcesehir University. Currently focusing on becoming a Web Developer and honing my skills in Full-Stack development. I enjoy working on my own projects to further enhance my knowledge in this field.</motion.p>
-						<motion.div className='flex gap-2 sm:gap-4'
+						<motion.div className='flex gap-2 sm:gap-4 flex-wrap justify-center sm:justify-start'
 							initial={{ opacity: 0, y: 100 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ type:"spring" ,duration: 0.4, delay: 0.3 }}
