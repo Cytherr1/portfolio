@@ -1,17 +1,14 @@
 This is a website for my project portfolio.
 
-## Techs I will be using on this project
+## Techs used on this project
 
 - React
 - Next.js
 - Tailwind CSS
 - Daisy UI
 
-I plan to practice Typescript.
-Also, I'm planning to host it on Vercel. 
+## It's Live!
 
-## Coming soon
-
-Still working on this. So, wait 'till my finals are over.
+Visit [now](https://www.ugurobuz.com/)
 
 Contact me from [LinkedIn](https://www.linkedin.com/in/ugobuz/) for more details.
